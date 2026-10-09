@@ -1,0 +1,717 @@
+@import "tailwindcss";
+
+/* =========================================================
+   SMILECARE DENTAL CLINIC
+   GLOBAL DESIGN SYSTEM
+   ========================================================= */
+
+:root {
+  /* =======================================================
+     BRAND COLORS
+     ======================================================= */
+
+  --primary: #1684e8;
+  --primary-hover: #0f73cf;
+  --primary-dark: #0b5fae;
+
+  --navy: #092f55;
+  --navy-light: #123858;
+
+  --cyan: #39b9f4;
+
+  /* =======================================================
+     BACKGROUND COLORS
+     ======================================================= */
+
+  --background: #ffffff;
+  --surface: #f7fbff;
+  --surface-blue: #eef8ff;
+  --surface-dark: #092f55;
+
+  /* =======================================================
+     TEXT COLORS
+     ======================================================= */
+
+  --foreground: #123858;
+  --heading: #092f55;
+
+  --muted: #647b91;
+  --muted-light: #8ba0b3;
+
+  /* =======================================================
+     BORDER COLORS
+     ======================================================= */
+
+  --border: #dcebf5;
+  --border-light: #eaf2f7;
+
+  /* =======================================================
+     STATUS COLORS
+     ======================================================= */
+
+  --success: #16a36a;
+  --warning: #f59e0b;
+  --danger: #dc3d4b;
+
+  /* =======================================================
+     LAYOUT
+     ======================================================= */
+
+  --container: 1180px;
+
+  /* =======================================================
+     BORDER RADIUS
+     ======================================================= */
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-2xl: 40px;
+
+  /* =======================================================
+     SHADOWS
+     ======================================================= */
+
+  --shadow-sm:
+    0 4px 16px rgba(9, 47, 85, 0.06);
+
+  --shadow-md:
+    0 12px 35px rgba(9, 47, 85, 0.09);
+
+  --shadow-lg:
+    0 25px 70px rgba(9, 47, 85, 0.13);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+
+  background: var(--background);
+  color: var(--foreground);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  line-height: 1.5;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   BUTTON / FORM RESET
+   ========================================================= */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+  width: min(
+    var(--container),
+    calc(100% - 32px)
+  );
+
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   SECTION SPACING
+   ========================================================= */
+
+.section {
+  padding: 96px 0;
+}
+
+.section-sm {
+  padding: 64px 0;
+}
+
+.section-xs {
+  padding: 40px 0;
+}
+
+
+/* =========================================================
+   EYEBROW / SMALL LABEL
+   ========================================================= */
+
+.eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  padding: 7px 14px;
+
+  border-radius: 999px;
+
+  background: var(--surface-blue);
+
+  color: var(--primary);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+   ========================================================= */
+
+.section-title {
+  margin: 14px 0 0;
+
+  color: var(--heading);
+
+  font-size: clamp(
+    32px,
+    4vw,
+    50px
+  );
+
+  font-weight: 800;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.04em;
+}
+
+
+/* =========================================================
+   SECTION DESCRIPTION
+   ========================================================= */
+
+.section-subtitle {
+  max-width: 650px;
+
+  margin-top: 16px;
+
+  color: var(--muted);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   BUTTON SYSTEM
+   ========================================================= */
+
+.btn {
+  display: inline-flex;
+
+  min-height: 48px;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0 22px;
+
+  border: 1px solid transparent;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease;
+}
+
+
+/* Button hover */
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Button focus */
+
+.btn:focus-visible {
+  outline: 3px solid rgba(22, 132, 232, 0.25);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.btn-primary {
+  background: var(--primary);
+
+  color: white;
+
+  box-shadow:
+    0 12px 28px rgba(
+      22,
+      132,
+      232,
+      0.22
+    );
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+
+  box-shadow:
+    0 16px 34px rgba(
+      22,
+      132,
+      232,
+      0.28
+    );
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
+
+.btn-secondary {
+  border-color: #a9d6f2;
+
+  background: white;
+
+  color: var(--primary-dark);
+}
+
+.btn-secondary:hover {
+  border-color: var(--primary);
+
+  background: var(--surface-blue);
+}
+
+
+/* =========================================================
+   DARK BUTTON
+   ========================================================= */
+
+.btn-dark {
+  background: var(--navy);
+
+  color: white;
+}
+
+.btn-dark:hover {
+  background: #061f39;
+}
+
+
+/* =========================================================
+   LIGHT BUTTON
+   ========================================================= */
+
+.btn-light {
+  background: white;
+
+  color: var(--primary-dark);
+}
+
+
+/* =========================================================
+   SMALL BUTTON
+   ========================================================= */
+
+.btn-sm {
+  min-height: 42px;
+
+  padding: 0 18px;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   CARD SYSTEM
+   ========================================================= */
+
+.card {
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+
+  background: white;
+
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================================================
+   CARD HOVER
+   ========================================================= */
+
+.card-hover {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+
+  border-color: #b9ddf4;
+
+  box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================================
+   BACKGROUND HELPERS
+   ========================================================= */
+
+.bg-soft-blue {
+  background: var(--surface);
+}
+
+.bg-blue {
+  background: var(--surface-blue);
+}
+
+.bg-navy {
+  background: var(--navy);
+}
+
+
+/* =========================================================
+   PRIMARY GRADIENT
+   ========================================================= */
+
+.gradient-primary {
+  background:
+    linear-gradient(
+      135deg,
+      #0e76d8 0%,
+      #2ca5f5 100%
+    );
+}
+
+
+/* =========================================================
+   SOFT GRADIENT
+   ========================================================= */
+
+.gradient-soft {
+  background:
+
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(
+        22,
+        132,
+        232,
+        0.11
+      ),
+      transparent 32%
+    ),
+
+    linear-gradient(
+      135deg,
+      #f5fbff 0%,
+      #eaf7ff 100%
+    );
+}
+
+
+/* =========================================================
+   TEXT GRADIENT
+   ========================================================= */
+
+.text-gradient {
+  background:
+    linear-gradient(
+      90deg,
+      #0b5fae,
+      #1684e8
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+}
+
+
+/* =========================================================
+   SHADOW HELPERS
+   ========================================================= */
+
+.shadow-soft {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-premium {
+  box-shadow: var(--shadow-lg);
+}
+
+
+/* =========================================================
+   FORM LABEL
+   ========================================================= */
+
+.form-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--heading);
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   FORM INPUT
+   ========================================================= */
+
+.form-input {
+  width: 100%;
+
+  min-height: 48px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  background: white;
+
+  padding: 0 14px;
+
+  color: var(--foreground);
+
+  outline: none;
+
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+
+/* Placeholder */
+
+.form-input::placeholder {
+  color: #9aabb9;
+}
+
+
+/* Input focus */
+
+.form-input:focus {
+  border-color: var(--primary);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(
+      22,
+      132,
+      232,
+      0.10
+    );
+}
+
+
+/* Textarea */
+
+textarea.form-input {
+  min-height: 130px;
+
+  padding: 13px 14px;
+
+  resize: vertical;
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  background: var(--surface-blue);
+
+  color: var(--primary-dark);
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.divider {
+  width: 100%;
+
+  height: 1px;
+
+  background: var(--border-light);
+}
+
+
+/* =========================================================
+   NO SCROLLBAR
+   ========================================================= */
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    width: min(
+      var(--container),
+      calc(100% - 24px)
+    );
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+  .section-sm {
+    padding: 48px 0;
+  }
+
+  .section-title {
+    font-size: clamp(
+      30px,
+      8vw,
+      42px
+    );
+  }
+
+  .section-subtitle {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .btn {
+    min-height: 46px;
+
+    padding-inline: 18px;
+  }
+
+  .btn-sm {
+    min-height: 40px;
+
+    padding-inline: 15px;
+  }
+}
