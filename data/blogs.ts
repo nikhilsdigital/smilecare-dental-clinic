@@ -20,7 +20,7 @@ export const blogs: BlogData[] = [
     date: "October 08, 2026",
     readTime: "5 min read",
     author: "Dr. Ananya Menon",
-    image: "/images/blog/blog-01.jpg",
+    image: "/images/blog/blog-01.png",
     content: [
       "Maintaining healthy teeth is not only about having a beautiful smile. Good oral hygiene plays an important role in your overall health and wellbeing.",
       "Brushing your teeth twice a day with fluoride toothpaste is one of the most important habits for preventing cavities and gum problems.",
@@ -39,7 +39,7 @@ export const blogs: BlogData[] = [
     date: "October 05, 2026",
     readTime: "6 min read",
     author: "Dr. Rahul Nair",
-    image: "/images/blog/blog-02.jpg",
+    image: "/images/blog/blog-02.png",
     content: [
       "Many dental problems develop slowly and may not cause serious pain in the beginning. Recognizing early warning signs can help you get treatment sooner.",
       "Persistent tooth pain, sensitivity to hot or cold foods, bleeding gums and swelling are some common signs that you may need a dental examination.",
@@ -58,7 +58,7 @@ export const blogs: BlogData[] = [
     date: "September 28, 2026",
     readTime: "8 min read",
     author: "Dr. Rahul Nair",
-    image: "/images/blog/blog-03.jpg",
+    image: "/images/blog/blog-03.png",
     content: [
       "Dental implants are a modern tooth replacement option designed to restore both function and appearance after tooth loss.",
       "A dental implant typically involves placing a small titanium implant into the jawbone, followed by a restoration designed to look and function like a natural tooth.",
@@ -77,7 +77,7 @@ export const blogs: BlogData[] = [
     date: "September 20, 2026",
     readTime: "5 min read",
     author: "Dr. Ananya Menon",
-    image: "/images/blog/blog-04.jpg",
+    image: "/images/blog/blog-04.png",
     content: [
       "Teeth can become darker or stained over time due to food, beverages, smoking and natural aging.",
       "Professional teeth whitening is performed under dental supervision and can provide more predictable results than many over-the-counter products.",
@@ -96,7 +96,7 @@ export const blogs: BlogData[] = [
     date: "September 14, 2026",
     readTime: "7 min read",
     author: "Dr. Meera Thomas",
-    image: "/images/blog/blog-05.jpg",
+    image: "/images/blog/blog-05.png",
     content: [
       "Both traditional braces and clear aligners can help improve tooth alignment and bite problems.",
       "Traditional braces use brackets and wires to gradually move teeth into their planned positions.",
@@ -115,7 +115,7 @@ export const blogs: BlogData[] = [
     date: "September 08, 2026",
     readTime: "4 min read",
     author: "Dr. Ananya Menon",
-    image: "/images/blog/blog-06.jpg",
+    image: "/images/blog/blog-06.png",
     content: [
       "Even with good daily brushing and flossing, plaque can accumulate in areas that are difficult to clean effectively at home.",
       "When plaque hardens into tartar, professional dental cleaning may be required to remove it safely.",
